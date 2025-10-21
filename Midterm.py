@@ -38,12 +38,14 @@ def hollow_right_triangle(n):
                 result += "*" * i
 
             else:
-            
-                for j in range(i - 1):
 
-                    result += "*" + " " * j
-                
                 result += "*"
+            
+                for j in range(i - 2): # when i == 2, j needs == 0, so the range for j has to be (1), since it is excluded, the values of j for i == 2. j = 0
+
+                    result += "*" + (" " * j) + "*"
+                
+               
                 
             result += "\n"
     
